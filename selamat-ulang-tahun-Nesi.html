@@ -1,0 +1,2198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+
+
+/* =====================================================
+   COLOR
+===================================================== */
+
+:root{
+
+--cream:#F7F1EA;
+
+--white:#ffffff;
+
+--navy:#21364A;
+
+--gold:#D4A84F;
+
+--dark:#222;
+
+--gray:#666;
+
+--shadow:0 20px 50px rgba(0,0,0,.12);
+
+--radius:28px;
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.12);
+color:#2f2f2f;
+
+overflow-x:hidden;
+
+}
+
+/* =====================================================
+   BASIC
+===================================================== */
+
+img{
+
+display:block;
+
+max-width:100%;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+section{
+
+width:100%;
+
+position:relative;
+
+}
+
+.container{
+
+width:min(1180px,92%);
+
+margin:auto;
+
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+z-index:999;
+
+transition:.4s;
+
+}
+
+header.scrolled{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(14px);
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.navbar{
+
+height:82px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
+
+.logo{
+
+font-family:'Great Vibes',cursive;
+
+font-size:42px;
+
+color:var(--gold);
+
+}
+
+.menu{
+
+display:flex;
+
+gap:38px;
+
+align-items:center;
+
+}
+
+.menu a{
+
+font-size:15px;
+
+font-weight:500;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+.menu a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:0;
+
+height:2px;
+
+background:var(--gold);
+
+transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+width:100%;
+
+}
+
+.btn-nav{
+
+padding:12px 28px;
+
+background:var(--gold);
+
+border-radius:999px;
+
+color:#fff;
+
+font-size:14px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-nav:hover{
+
+transform:translateY(-3px);
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+background:linear-gradient(
+180deg,
+#FFFDFB 0%,
+#F7F1EA 100%
+);
+
+padding-top:90px;
+
+overflow:hidden;
+
+}
+
+.hero-wrap{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.hero-left h3{
+
+font-size:18px;
+
+font-weight:500;
+
+color:var(--gold);
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+margin-bottom:18px;
+
+}
+
+.hero-left h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:66px;
+
+line-height:1.08;
+
+color:var(--cream);
+
+margin-bottom:25px;
+
+}
+
+.hero-left p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:var(--gray);
+
+max-width:560px;
+
+margin-bottom:38px;
+
+}
+
+.hero-btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:18px 42px;
+
+background:var(--navy);
+
+color:#fff;
+
+border-radius:999px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.hero-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 35px rgba(33,54,74,.25);
+
+}
+
+.hero-right{
+
+display:flex;
+
+justify-content:center;
+
+position:relative;
+
+}
+
+
+/* =====================================================
+   IMAGE FRAME
+===================================================== */
+
+.hero-photo{
+
+width:470px;
+
+height:590px;
+
+background:#fff;
+
+border-radius:38px;
+
+padding:18px;
+
+box-shadow:var(--shadow);
+
+position:relative;
+
+}
+
+.hero-photo img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+border-radius:24px;
+
+}
+
+.circle1{
+
+position:absolute;
+
+width:180px;
+
+height:180px;
+
+background:#969FB5;
+border-radius:50%;
+
+top:-40px;
+
+right:-50px;
+
+z-index:-1;
+
+}
+
+.circle2{
+
+position:absolute;
+
+width:140px;
+
+height:140px;
+
+background:#6F799E;
+border-radius:50%;
+
+bottom:-30px;
+
+left:-40px;
+
+z-index:-1;
+
+}
+
+
+/* =====================================================
+   SCROLL
+===================================================== */
+
+.scroll-down{
+
+position:absolute;
+
+left:50%;
+
+bottom:35px;
+
+transform:translateX(-50%);
+
+font-size:13px;
+
+letter-spacing:3px;
+
+color:#777;
+
+text-transform:uppercase;
+
+animation:updown 2s infinite;
+
+}
+
+@keyframes updown{
+
+0%{transform:translate(-50%,0);}
+
+50%{transform:translate(-50%,8px);}
+
+100%{transform:translate(-50%,0);}
+
+}
+
+
+/* =====================================================
+   WAVE
+===================================================== */
+
+.wave{
+
+position:absolute;
+
+bottom:-5px;
+
+left:0;
+
+width:100%;
+
+line-height:0;
+
+}
+
+.wave svg{
+
+display:block;
+
+width:100%;
+
+height:100px;
+
+}
+
+.wave svg path{
+    fill: #344973;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:980px){
+
+.hero-wrap{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-left{
+
+order:2;
+
+}
+
+.hero-right{
+
+order:1;
+
+}
+
+.hero-left h1{
+
+font-size:46px;
+
+}
+
+.hero-photo{
+
+width:340px;
+
+height:430px;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+<style>
+body{background:#040b1f!important;color:#eef5ff!important}
+body:before{content:'';position:fixed;inset:0;background:transparent;z-index:-1}
+.star{position:fixed;border-radius:50%;background:#fff;box-shadow:0 0 8px #fff;animation:tw 2s infinite ease-in-out;pointer-events:none}
+@keyframes tw{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.4)}}
+section,.hero,.gallery,.timeline,.wish-section,.countdown-section,.quote-section,.footer{background:transparent!important}
+.hero-photo,.about-card,.quote-card,.photo,.wish-card,.timeline-item,.countdown-box{background:rgba(10,20,45,.75)!important;color:#eef5ff!important}
+h1,h2,h3,p,a,span{color:inherit}
+</style>
+
+<style>
+body{background:linear-gradient(180deg,#020817,#071a35)!important;color:#eef4ff!important}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 20% 20%,rgba(255,255,255,.12),transparent 25%),radial-gradient(circle at 80% 30%,rgba(120,180,255,.08),transparent 30%);z-index:-2}
+</style>
+
+<style>
+.hero-left h3,
+.about-text h2,
+.quote-card h2,
+.section-title h2,
+.countdown-box h2{
+color:#F7F1EA !important;
+}
+</style>
+
+</head>
+
+<body>
+
+<header id="header">
+
+<div class="container navbar">
+
+<a href="#" class="logo">Birthday Nesi's</a>
+
+<nav class="menu">
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#wish">Wish</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="container hero-wrap">
+
+<div class="hero-left">
+
+<h3>Happy Birthday</h3>
+
+<h1>
+Selamat Ulang Tahun<br>
+Sayang
+</h1>
+
+<p>
+
+Kehadiran sayang membuat dunia aa jauh lebih terang. 
+Semoga kita bisa menua bersama dengan penuh kebahagiaan yang di ridhoi Allah SWT.
+Semoga Allah SWT senantiasa melimpahkan kesehatan, kebahagiaan, dan keberkahan dalam setiap langkah sayang.
+
+</p>
+
+
+
+</div>
+
+<div class="hero-right">
+
+<div class="circle1"></div>
+
+<div class="circle2"></div>
+
+<div class="hero-photo">
+
+<!-- GANTI FOTO HERO DI SINI -->
+<img src="kaca.jpeg" alt="kaca.jpeg">
+
+</div>
+
+</div>
+
+</div>
+
+<div class="scroll-down">
+
+Scroll
+
+</div>
+
+<div class="wave">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+<path fill="#ffffff"
+fill-opacity="1"
+d="M0,224L80,197.3C160,171,320,117,480,112C640,107,800,149,960,170.7C1120,192,1280,192,1360,192L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+</path>
+</svg>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section id="about" style="background:#fff;padding:120px 0;">
+
+<div class="container">
+
+<div class="about-wrap">
+
+<div class="about-image">
+
+<div class="about-card">
+
+<!-- GANTI FOTO DI SINI -->
+<img src="mama.jpeg" alt="About">
+
+</div>
+
+</div>
+
+<div class="about-text">
+
+<span class="section-mini">
+Untuk Kamu
+</span>
+
+<h2>
+
+Sebuah Hari
+yang Layak Dirayakan
+
+</h2>
+
+<p>
+
+Aa selalu berdoa agar Allah SWT selalu menjaga dan melindungi sayang 
+dan  Semoga setiap doa baik yang sayang panjatkan dikabulkan, dan 
+setiap langkah sayang dipenuhi kemudahan.
+
+</p>
+
+<p>
+
+Semoga usia sayang yang bertambah membawa semakin banyak kebaikan dalam hidup.
+
+
+</p>
+
+<div class="about-box">
+
+<div>
+
+<h3>365+</h3>
+
+<span>Hari Bahagia</span>
+
+</div>
+
+<div>
+
+<h3>100%</h3>
+
+<span>Doa Terbaik</span>
+
+</div>
+
+<div>
+
+<h3>∞</h3>
+
+<span>Semangat Baru</span>
+
+</div>
+
+</div>
+
+<a href="#gallery" class="hero-btn">
+
+Lihat Gallery
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* =====================================================
+     ABOUT
+===================================================== */
+
+.about-wrap{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+}
+
+.about-image{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.about-card{
+
+width:420px;
+
+background:#fff;
+
+padding:18px;
+
+border-radius:30px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+transform:rotate(-2deg);
+
+transition:.4s;
+
+}
+
+.about-card:hover{
+
+transform:rotate(0deg) scale(1.02);
+
+}
+
+.about-card img{
+
+width:100%;
+
+height:540px;
+
+object-fit:cover;
+
+border-radius:20px;
+
+}
+
+.section-mini{
+
+display:inline-block;
+
+padding:10px 18px;
+
+background:#F7F1EA;
+
+color:#D4A84F;
+
+border-radius:999px;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+margin-bottom:20px;
+
+}
+
+.about-text h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:52px;
+
+line-height:1.2;
+
+color:#21364A;
+
+margin-bottom:28px;
+
+}
+
+.about-text p{
+
+font-size:17px;
+
+line-height:2;
+
+color:#666;
+
+margin-bottom:24px;
+
+}
+
+.about-box{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:18px;
+
+margin:40px 0;
+
+}
+
+.about-box div{
+
+background:#F7F1EA;
+
+padding:30px;
+
+border-radius:22px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.about-box div:hover{
+
+transform:translateY(-8px);
+
+background:#21364A;
+
+color:#fff;
+
+}
+
+.about-box h3{
+
+font-size:34px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:8px;
+
+}
+
+.about-box span{
+
+font-size:14px;
+
+}
+
+@media(max-width:980px){
+
+.about-wrap{
+
+grid-template-columns:1fr;
+
+}
+
+.about-text{
+
+text-align:center;
+
+}
+
+.about-card{
+
+width:340px;
+
+}
+
+.about-card img{
+
+height:430px;
+
+}
+
+.about-box{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<!-- =====================================================
+     QUOTES
+===================================================== -->
+
+<section id="quote" class="quote-section">
+
+<div class="container">
+
+<div class="quote-card">
+
+<div class="quote-icon">❝</div>
+
+<h2>
+
+Selamat Ulang Tahun
+
+</h2>
+
+<p>
+
+"Semoga Allah SWT menjaga cinta dan kebersamaan kita, 
+menguatkan langkah kita dalam kebaikan, serta 
+mengumpulkan kita dalam kebahagiaan dunia dan akhirat."
+
+</p>
+
+<span>
+
+— Dengan penuh doa terbaik —
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     TIMELINE
+===================================================== -->
+
+<section class="timeline">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Perjalanan</span>
+
+<h2>Momen Indah</h2>
+
+<p>
+
+Setiap kenangan memiliki cerita yang tak akan
+tergantikan.
+
+</p>
+
+</div>
+
+<div class="timeline-list">
+
+<div class="timeline-item">
+
+<div class="number">
+01
+</div>
+
+<h3>Pertemuan</h3>
+
+<p>
+
+Semua cerita indah selalu dimulai dari sebuah
+pertemuan sederhana. Kaya sayang sama aa yang dimulai
+dari awal yang sederhana.
+
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="number">
+02
+</div>
+
+<h3>Kenangan</h3>
+
+<p>
+
+Hari-hari yang dipenuhi tawa dan bersama dalam berbagai keadaan
+akan selalu menjadi
+bagian terbaik untuk dikenang. 
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<div class="number">
+03
+</div>
+
+<h3>Harapan</h3>
+
+<p>
+
+Semoga tahun ini menjadi awal dari semua impian
+yang segera terwujud. Aamiin.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* ===================================
+QUOTE
+=================================== */
+
+.quote-section{
+
+padding:120px 0;
+
+background:#F7F1EA;
+
+}
+
+.quote-card{
+
+background:#fff;
+
+padding:70px;
+
+border-radius:32px;
+
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+text-align:center;
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.quote-icon{
+
+font-size:70px;
+
+color:#D4A84F;
+
+margin-bottom:20px;
+
+}
+
+.quote-card h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:48px;
+
+color:#21364A;
+
+margin-bottom:20px;
+
+}
+
+.quote-card p{
+
+font-size:19px;
+
+line-height:2;
+
+color:#666;
+
+margin-bottom:25px;
+
+}
+
+.quote-card span{
+
+color:#D4A84F;
+
+letter-spacing:2px;
+
+font-size:14px;
+
+}
+
+
+/* ===================================
+TIMELINE
+=================================== */
+
+.timeline{
+
+padding:120px 0;
+
+background:#fff;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-title span{
+
+color:#D4A84F;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+font-size:13px;
+
+}
+
+.section-title h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:54px;
+
+margin:18px 0;
+
+color:#21364A;
+
+}
+
+.section-title p{
+
+max-width:650px;
+
+margin:auto;
+
+color:#666;
+
+line-height:1.8;
+
+}
+
+.timeline-list{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.timeline-item{
+
+background:#F7F1EA;
+
+padding:40px;
+
+border-radius:28px;
+
+transition:.35s;
+
+}
+
+.timeline-item:hover{
+
+transform:translateY(-10px);
+
+background:#21364A;
+
+color:white;
+
+}
+
+.timeline-item:hover p{
+
+color:#eee;
+
+}
+
+.number{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:#D4A84F;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+color:white;
+
+font-weight:700;
+
+margin-bottom:25px;
+
+font-size:20px;
+
+}
+
+.timeline-item h3{
+
+font-size:26px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:15px;
+
+}
+
+.timeline-item p{
+
+color:#666;
+
+line-height:1.9;
+
+}
+
+
+@media(max-width:980px){
+
+.quote-card{
+
+padding:40px 25px;
+
+}
+
+.quote-card h2{
+
+font-size:36px;
+
+}
+
+.timeline-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section id="gallery" class="gallery">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Gallery</span>
+
+<h2>Kenangan Terbaik</h2>
+
+<p>
+
+Kumpulan foto yang akan selalu menjadi cerita
+indah untuk dikenang.
+
+</p>
+
+</div>
+
+<div class="gallery-grid">
+
+<div class="photo">
+<img src="papa1.jpeg" alt="">
+</div>
+
+<div class="photo">
+<img src="malam.jpeg" alt="">
+</div>
+
+<div class="photo">
+<img src="hitam.jpeg" alt="">
+</div>
+
+<div class="photo">
+<img src="kolam.jpeg" alt="">
+</div>
+
+<div class="photo">
+<img src="awal.jpeg" alt="">
+</div>
+
+<div class="photo">
+<img src="lucucu.jpeg" alt="">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="close-lightbox">&times;</span>
+
+<img id="lightbox-img" src="" alt="">
+
+</div>
+
+
+
+<style>
+
+/* =======================================
+GALLERY
+======================================= */
+
+.gallery{
+
+padding:120px 0;
+
+background:#F7F1EA;
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:70px;
+
+}
+
+.photo{
+
+background:white;
+
+padding:16px;
+
+border-radius:28px;
+
+box-shadow:0 18px 40px rgba(0,0,0,.08);
+
+cursor:pointer;
+
+transition:.35s;
+
+overflow:hidden;
+
+}
+
+.photo:hover{
+
+transform:translateY(-10px);
+
+}
+
+.photo img{
+
+width:100%;
+
+height:330px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+transition:.4s;
+
+}
+
+.photo:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* =======================================
+LIGHTBOX
+======================================= */
+
+.lightbox{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,.88);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:99999;
+
+padding:30px;
+
+}
+
+.lightbox.active{
+
+display:flex;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:20px;
+
+}
+
+.close-lightbox{
+
+position:absolute;
+
+top:30px;
+
+right:40px;
+
+font-size:48px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+@media(max-width:980px){
+
+.gallery-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.photo img{
+
+height:300px;
+
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+/* ===============================
+LIGHTBOX
+=============================== */
+
+const photos=document.querySelectorAll(".photo img");
+
+const lightbox=document.getElementById("lightbox");
+
+const lightboxImg=document.getElementById("lightbox-img");
+
+const closeLightbox=document.querySelector(".close-lightbox");
+
+photos.forEach(photo=>{
+
+photo.onclick=()=>{
+
+lightbox.classList.add("active");
+
+lightboxImg.src=photo.src;
+
+}
+
+})
+
+closeLightbox.onclick=()=>{
+
+lightbox.classList.remove("active");
+
+}
+
+lightbox.onclick=(e)=>{
+
+if(e.target===lightbox){
+
+lightbox.classList.remove("active");
+
+}
+
+}
+
+
+
+/* ===============================
+NAVBAR
+=============================== */
+
+window.addEventListener("scroll",()=>{
+
+const header=document.getElementById("header");
+
+if(window.scrollY>60){
+
+header.classList.add("scrolled");
+
+}else{
+
+header.classList.remove("scrolled");
+
+}
+
+});
+
+</script>
+
+<!-- =====================================================
+     WISH SECTION
+===================================================== -->
+
+<section id="wish" class="wish-section">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>Ucapan</span>
+
+<h2>Doa Terbaik Untuk sayang</h2>
+
+<p>
+Semoga kebahagiaan selalu menyertai setiap langkah sayang,
+dan semua kebahagiaan sayang perlahan menjadi kenyataan.
+</p>
+
+</div>
+
+<div class="wish-grid">
+
+<div class="wish-card">
+
+<div class="wish-icon">🎂</div>
+
+<h3>Bahagia Selalu</h3>
+
+<p>
+Semoga hari-hari sayang selalu dipenuhi senyum,
+kesehatan, dan keberkahan dalam setiap langkah sayang.
+</p>
+
+</div>
+
+<div class="wish-card">
+
+<div class="wish-icon">🎉</div>
+
+<h3>Semoga Sukses</h3>
+
+<p>
+Semoga semua usaha yang sayang lakukan
+berbuah hasil terbaik dan penuh berkah.
+</p>
+
+</div>
+
+<div class="wish-card">
+
+<div class="wish-icon">💖</div>
+
+<h3>Semoga Tercapai</h3>
+
+<p>
+Semoga kita bisa menua bersama dengan penuh kebahagiaan yang di ridhoi Allah SWT.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COUNTDOWN
+===================================================== -->
+
+<section class="countdown-section">
+
+<div class="container">
+
+<div class="countdown-box">
+
+<h2>Happy Birthday</h2>
+
+<p>
+
+Hari spesial akan selalu menjadi momen
+yang layak dikenang. Terima kasih karna sayang udah
+hadir di hidup aa.
+
+</p>
+
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* ===================================
+WISH
+=================================== */
+
+.wish-section{
+
+padding:120px 0;
+
+background:white;
+
+}
+
+.wish-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:70px;
+
+}
+
+.wish-card{
+
+padding:45px;
+
+background:#F7F1EA;
+
+border-radius:30px;
+
+transition:.4s;
+
+text-align:center;
+
+}
+
+.wish-card:hover{
+
+transform:translateY(-10px);
+
+background:#21364A;
+
+color:white;
+
+}
+
+.wish-card:hover p{
+
+color:#eee;
+
+}
+
+.wish-icon{
+
+font-size:60px;
+
+margin-bottom:25px;
+
+}
+
+.wish-card h3{
+
+font-size:28px;
+
+font-family:'Playfair Display',serif;
+
+margin-bottom:15px;
+
+}
+
+.wish-card p{
+
+line-height:1.9;
+
+color:#666;
+
+}
+
+
+
+/* ===================================
+COUNTDOWN
+=================================== */
+
+.countdown-section{
+
+padding:120px 0;
+
+background:#F7F1EA;
+
+}
+
+.countdown-box{
+
+padding:70px;
+
+background:white;
+
+border-radius:35px;
+
+text-align:center;
+
+box-shadow:0 20px 45px rgba(0,0,0,.08);
+
+}
+
+.countdown-box h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:54px;
+
+color:#21364A;
+
+margin-bottom:20px;
+
+}
+
+.countdown-box p{
+
+color:#666;
+
+margin-bottom:50px;
+
+}
+
+.count-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+}
+
+.count-item{
+
+padding:35px;
+
+background:#21364A;
+
+color:white;
+
+border-radius:25px;
+
+}
+
+.count-item h3{
+
+font-size:48px;
+
+margin-bottom:10px;
+
+font-family:'Playfair Display',serif;
+
+}
+
+.count-item span{
+
+letter-spacing:2px;
+
+font-size:14px;
+
+text-transform:uppercase;
+
+}
+
+
+
+@media(max-width:980px){
+
+.wish-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.count-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+/* ===================================
+COUNTDOWN
+=================================== */
+
+/*
+UBAH TANGGAL DI SINI
+Format:
+YYYY-MM-DDTHH:MM:SS
+*/
+
+const birthday=new Date("2026-01-01T00:00:00").getTime();
+
+setInterval(()=>{
+
+const now=new Date().getTime();
+
+const distance=birthday-now;
+
+const d=Math.floor(distance/(1000*60*60*24));
+
+const h=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+const m=Math.floor((distance%(1000*60*60))/(1000*60));
+
+const s=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("days").innerHTML=d<0?0:d;
+
+document.getElementById("hours").innerHTML=h;
+
+document.getElementById("minutes").innerHTML=m;
+
+document.getElementById("seconds").innerHTML=s;
+
+},1000);
+
+</script>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer id="contact" class="footer">
+
+<div class="container">
+
+<h2>Terima Kasih</h2>
+
+<p>
+
+Terima kasih sudah menjadi seseorang yang luar biasa.
+Semoga hari ini menjadi awal dari banyak kebahagiaan
+yang akan datang.
+
+</p>
+
+<a href="#home" class="back-top">
+Kembali ke Atas ↑
+</a>
+
+<p class="copyright">
+
+© 2026 Happy Birthday sayang • Aa samsul
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+<button id="musicBtn">
+
+🎵
+
+</button>
+
+<audio id="bgMusic" loop>
+
+<!-- GANTI MUSIK DI SINI -->
+
+<source src="bergema.mpeg" type="audio/mpeg">
+
+</audio>
+
+
+
+<style>
+
+/* =====================================
+FOOTER
+===================================== */
+
+.footer{
+
+padding:120px 0 70px;
+
+background:#21364A;
+
+text-align:center;
+
+color:white;
+
+}
+
+.footer h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:54px;
+
+margin-bottom:25px;
+
+}
+
+.footer p{
+
+max-width:650px;
+
+margin:auto;
+
+line-height:2;
+
+opacity:.9;
+
+}
+
+.back-top{
+
+display:inline-block;
+
+margin-top:45px;
+
+padding:18px 42px;
+
+background:#D4A84F;
+
+border-radius:999px;
+
+font-weight:600;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.back-top:hover{
+
+transform:translateY(-5px);
+
+}
+
+.copyright{
+
+margin-top:70px;
+
+font-size:14px;
+
+opacity:.6;
+
+}
+
+
+
+/* =====================================
+MUSIC BUTTON
+===================================== */
+
+#musicBtn{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:62px;
+
+height:62px;
+
+border:none;
+
+border-radius:50%;
+
+background:#D4A84F;
+
+color:white;
+
+font-size:24px;
+
+cursor:pointer;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+#musicBtn:hover{
+
+transform:scale(1.08);
+
+}
+
+</style>
+
+
+
+<script>
+
+/* =====================================
+MUSIC
+===================================== */
+
+const music=document.getElementById("bgMusic");
+
+const musicBtn=document.getElementById("musicBtn");
+
+let playing=false;
+
+musicBtn.onclick=()=>{
+
+if(!playing){
+
+music.play();
+
+musicBtn.innerHTML="⏸";
+
+playing=true;
+
+}else{
+
+music.pause();
+
+musicBtn.innerHTML="🎵";
+
+playing=false;
+
+}
+
+};
+
+
+
+/* =====================================
+SCROLL REVEAL
+===================================== */
+
+const reveal=document.querySelectorAll("section");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+
+opacity:0,
+
+transform:"translateY(60px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:900,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+});
+
+reveal.forEach(el=>observer.observe(el));
+
+</script>
+
+
+<script>
+for(let i=0;i<140;i++){let s=document.createElement('div');s.className='star';let z=1+Math.random()*3;s.style.width=z+'px';s.style.height=z+'px';s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';s.style.animationDelay=(Math.random()*3)+'s';s.style.animationDuration=(2+Math.random()*3)+'s';document.body.appendChild(s);}
+</script>
+</body>
+
+</html>
